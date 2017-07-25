@@ -17,7 +17,8 @@ $(document).ready(function()
     {
         const table = document.getElementById("customerTable");
 
-        customerInfo.forEach(function(customer) {
+        customerInfo.forEach(function(customer) 
+        {
             
             var tableRow = "<tr><td>"+customer.first_name + "</td>";
 
