@@ -18,9 +18,9 @@ $(document).ready(function()
         customerInfo.forEach(function(customer) 
         {
             
-            var tableRow = "<tr><td>"+customer.first_name + "</td>";
+            var tableRow = "<tr><td>"+ customer.first_name + "</td>";
 
-            customer.last_name ? tableRow += "<td>"+customer.last_name + "</td>" : tableRow += "<td> N/A </td>";
+            customer.last_name ? tableRow += "<td>"+ customer.last_name + "</td>" : tableRow += "<td> N/A </td>";
 
             customer.home === "Unspecified" ? tableRow+= "<td> N/A </td>" : tableRow += "<td>"+ customer.home + "</td></tr>"
         
