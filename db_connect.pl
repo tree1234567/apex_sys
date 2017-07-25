@@ -12,7 +12,19 @@ $people->do( "INSERT INTO customers VALUES ('Clara', 'Oswald', 'Earth') " );
 $people->do( "INSERT INTO customers VALUES ('Adric', 'N/A', 'Alzarius') " );
 $people->do( "INSERT INTO customers VALUES ('Susan', 'Foreman', 'Gallifrey') " );
 
-$res = $people->selectall_arrayref( q( SELECT first_name, last_name, home FROM customers;));
+$response = $people->selectall_arrayref( q( SELECT first_name, last_name, home FROM customers;));
 
 
 $dbh->disconnect;
+
+
+foreach( @$response )
+{
+    
+  foreach $i (0..$#$_)
+  {
+    print "$_->[$i] "
+  }
+
+  print "\n";
+}
