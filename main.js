@@ -15,8 +15,6 @@ $(document).ready(function()
 
     function createTable(customerInfo)
     {
-        const table = document.getElementById("customerTable");
-
         customerInfo.forEach(function(customer) 
         {
             
